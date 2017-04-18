@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="EdwordHao, NexT" />
+  <meta name="keywords" content="css," />
 
 
 
@@ -88,13 +88,13 @@
 
 
 <meta name="description" content="BFC详解人们经常会说到BFC,在网上面也有很多BFC的文章, 介绍了如何触发BFC,以及BFC的一些用处(如:清除浮动,防止margin重叠等).  虽然我们知道如何利用BFC去解决问题,但是当真正问道BFC是什么的时候,还是不能很励志气壮的解释清楚. 所以,最近我翻阅很多文档,现在在这里对BFC进行一个全面的汇总讲解 一. 什么是BFCBFC的定义BFC(Block Formatting Co">
-<meta name="keywords">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="bfc详解">
 <meta property="og:url" content="http://yoursite.com/2017/04/12/bfc详解/index.html">
 <meta property="og:site_name" content="HuangHao's Blog">
 <meta property="og:description" content="BFC详解人们经常会说到BFC,在网上面也有很多BFC的文章, 介绍了如何触发BFC,以及BFC的一些用处(如:清除浮动,防止margin重叠等).  虽然我们知道如何利用BFC去解决问题,但是当真正问道BFC是什么的时候,还是不能很励志气壮的解释清楚. 所以,最近我翻阅很多文档,现在在这里对BFC进行一个全面的汇总讲解 一. 什么是BFCBFC的定义BFC(Block Formatting Co">
-<meta property="og:updated_time" content="2017-04-12T13:52:46.251Z">
+<meta property="og:updated_time" content="2017-04-18T11:03:37.007Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bfc详解">
 <meta name="twitter:description" content="BFC详解人们经常会说到BFC,在网上面也有很多BFC的文章, 介绍了如何触发BFC,以及BFC的一些用处(如:清除浮动,防止margin重叠等).  虽然我们知道如何利用BFC去解决问题,但是当真正问道BFC是什么的时候,还是不能很励志气壮的解释清楚. 所以,最近我翻阅很多文档,现在在这里对BFC进行一个全面的汇总讲解 一. 什么是BFCBFC的定义BFC(Block Formatting Co">
@@ -182,7 +182,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <h1 class="site-subtitle" itemprop="description"></h1>
       
   </div>
 
@@ -301,14 +301,14 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
                 bfc详解
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -401,7 +401,6 @@
 <li>自适应两栏布局</li>
 </ol>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">    .father &#123;</div><div class="line">        width: 300px;</div><div class="line">        position: relative;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    .aside &#123;</div><div class="line">        width: 100px;</div><div class="line">        height: 150px;</div><div class="line">        float: left;</div><div class="line">        background: red;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    .main &#123;</div><div class="line">        height: 200px;</div><div class="line">        background: pink;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"aside"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>这行代码在执行下来的结果是:</p>
 <pre><code>aside这个盒子是左浮动,脱离标准流,不占位置.
 而且main这个盒子由于没有给宽度会继承父盒子father的宽度.
 所以实现的效果是,aside这个盒子是压在main这个盒子的上面,左上角对齐.
@@ -412,7 +411,6 @@
 <pre><code>BFC的区域不会与float box重叠。
 </code></pre><p>我们可以通过触发main生成BFC,来实现自适应两栏布局.</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">.main &#123;</div><div class="line">    overflow: hidden;</div><div class="line">&#125;</div><div class="line">```	</div><div class="line"></div><div class="line">当触发main生成BFC后，这个新的BFC不会与浮动的aside重叠。因此会根据包含块的宽度，和aside的宽度，自动变窄。</div><div class="line"></div><div class="line">2. 清除内部浮动</div><div class="line"></div><div class="line">```html</div><div class="line">&lt;style&gt;</div><div class="line">    .father &#123;</div><div class="line">        border: 5px solid #fcc;</div><div class="line">        width: 300px;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    .child &#123;</div><div class="line">        border: 5px solid #f66;</div><div class="line">        width:100px;</div><div class="line">        height: 100px;</div><div class="line">        float: left;</div><div class="line">    &#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div class="father"&gt;</div><div class="line">        &lt;div class="child"&gt;&lt;/div&gt;</div><div class="line">        &lt;div class="child"&gt;&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
-<p>这行代码在执行下来的结果是:</p>
 <pre><code>father这个盒子只有宽度,没有高度,child两个盒子,正常显示
 </code></pre><p>根据BFC布局规则第六条</p>
 <pre><code>计算BFC的高度时，浮动元素也参与计算
@@ -422,7 +420,6 @@
 <li>防止垂直 margin 重叠</li>
 </ol>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">    <span class="selector-tag">p</span> &#123;</div><div class="line">        <span class="attribute">color</span>: <span class="number">#f55</span>;</div><div class="line">        <span class="attribute">background</span>: <span class="number">#fcc</span>;</div><div class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">        <span class="attribute">line-height</span>: <span class="number">100px</span>;</div><div class="line">        <span class="attribute">text-align</span>:center;</div><div class="line">        <span class="attribute">margin</span>: <span class="number">100px</span>;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Haha<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hehe<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>这行代码在执行下来的结果是:</p>
 <pre><code>两个p之间的距离为100px，发送了margin重叠。
 </code></pre><p>根据BFC布局规则第二条</p>
 <pre><code>Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠
@@ -458,6 +455,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+        </div>
+      
 
       
         
@@ -466,6 +469,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/18/Math对象/" rel="next" title="Math对象">
+                <i class="fa fa-chevron-left"></i> Math对象
+              </a>
             
           </div>
 
@@ -569,15 +576,15 @@
                alt="Edword Hao" />
           <p class="site-author-name" itemprop="name">Edword Hao</p>
            
-              <p class="site-description motion-element" itemprop="description">一只程序猿~~</p>
-          
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
 
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -590,7 +597,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -694,7 +701,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy;  2015 - 
+  &copy; 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
